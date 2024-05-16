@@ -12,10 +12,7 @@ Este é um projeto fullstack desenvolvido por Ryan Figueredo.
 # Funcionamento
 
 Aqui está um vídeo demonstrativo:
-
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=g9N_o_p6djw" frameborder="0" allowfullscreen></iframe>
-
-- 
+https://www.youtube.com/watch?v=g9N_o_p6djw
 
 ## Pré-requisitos
 
