@@ -1,46 +1,65 @@
-# Getting Started with Create React App
+# Atendimento de Tickets
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um projeto de aplicativo web para gerenciamento de tickets de suporte.
 
-## Available Scripts
+# Projeto Fullstack
 
-In the project directory, you can run:
+Este é um projeto fullstack desenvolvido por Ryan Figueredo.
 
-### `npm start`
+- Front-end: Framework React.js e TypeScript.
+- Back-end: Express, Node.js, implementado através do arquivo server.js.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Pré-requisitos
 
-### `npm test`
+Antes de começar, verifique se você tem os seguintes requisitos:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js e npm instalados no seu computador
+- MySQL Server instalado e em execução
+- Conhecimento básico de Node.js, Express e React
 
-### `npm run build`
+## Instalação e Configuração
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Siga estas etapas para instalar e configurar o projeto:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone o repositório do GitHub:
+``git clone https://github.com/seu-usuario/atendimento-de-tickets.git``
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navegue até o diretório do projeto:
+``cd atendimento-de-tickets``
 
-### `npm run eject`
+3. Instale as dependências do servidor:
+``npm install``
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+7. Configure o banco de dados MySQL:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Crie um banco de dados chamado `support_web`.
+- Execute o script `database.sql` para criar a tabela `tickets`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Executando o Servidor
 
-## Learn More
+Para iniciar o servidor, execute o seguinte comando no diretório raiz do projeto:
+``npm start``
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+O servidor será iniciado na porta `3000`.
+
+## Executando o Cliente
+
+Para iniciar o cliente, execute o seguinte comando no diretório `client` do projeto:
+
+
+O cliente será iniciado na porta `3000` e abrirá automaticamente uma janela do navegador.
+
+## Uso
+
+- Acesse o aplicativo em `http://localhost:3000`.
+- Crie novos tickets de suporte.
+- Visualize e gerencie os tickets existentes.
+
+## Contribuindo
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir um Pull Request ou relatar problemas.
+
+

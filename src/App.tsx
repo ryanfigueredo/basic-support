@@ -1,24 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+import TicketList from './components/TicketList';
+import TicketForm from './components/TicketForm';
+import Footer from './components/Footer';
+import axios from 'axios';
 
-function App() {
+const App: React.FC = () => {
+  const [tickets, setTickets] = React.useState([]);
+
+  React.useEffect(() => {
+    // Carregar tickets do servidor ao montar o componente
+    fetchTickets();
+  }, []);
+
+  const fetchTickets = async () => {
+    try {
+      const response = await axios.get('/api/tickets');
+      setTickets(response.data);
+    } catch (error) {
+      console.error('Erro ao buscar tickets:', error);
+    }
+  };
+
+  const handleCreateTicket = async (title: string, description: string) => {
+    try {
+      await axios.post('/api/tickets', { title, description });
+      console.log('Novo ticket criado:', title, description);
+      // Recarregar lista de tickets após a criação bem-sucedida
+      fetchTickets();
+    } catch (error) {
+      console.error('Erro ao criar ticket:', error);
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <main>
+        <TicketList tickets={tickets} />
+        <TicketForm onSubmit={handleCreateTicket} />
+      </main>
+      <Footer />
     </div>
   );
 }
